@@ -1,0 +1,73 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+.mainContainer{
+
+    header{
+    
+        width: 100vw;
+        height: 12vh;
+        position: relative;
+    
+        display: flex;
+        flex-direction: row;
+        align-items: center;
+        justify-content: center;
+    
+        background-color: black;
+    
+    
+        .logo{
+            display: flex;
+            flex-direction: row;
+            align-items: center;
+            justify-content: space-around;
+            
+    
+            color: white;
+            h1{
+                font-size: 5vh;
+            }
+    
+            i{
+                display: flex;
+                align-items: center;
+                justify-content: center;
+    
+                width: 10vh;
+                height: 10vh;
+                font-size: 5.5vh;
+                border-radius: 100%;
+    
+                color: black;
+                background-color: orange;
+            }
+        }
+    
+        .aside{
+            position: absolute;
+            right: 3%;
+            cursor: pointer;
+            
+            i{
+            
+                font-size: 6vh;
+                color: white;
+                transition: all 0.7s;
+            
+            }
+    
+            i:hover{
+            
+                color: orange;
+            
+            }
+    
+        }
+    
+    }
+    
+}

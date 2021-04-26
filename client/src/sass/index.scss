@@ -1,0 +1,8 @@
+@import "header";
+@import "aside";
+
+#root{
+    display: flex;
+    flex-direction: row;
+    overflow-x: hidden;
+}

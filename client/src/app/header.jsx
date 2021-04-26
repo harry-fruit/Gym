@@ -6,19 +6,17 @@ export class Header extends Component{
     render(){
         return(
 
-            <Fragment>
+            <header>
 
-                <Link to="/home" >
-                    Home
-                </Link>
-                <Link to="/about" >
-                    About
-                </Link>
-                <Link to="/modalities" >
-                    Modalities
-                </Link>
+                <div className={"logo"}>
+                    <h1>Gym</h1> 
+                    <i class="fas fa-dumbbell"></i>
+                </div>
 
-            </Fragment>
+                <div className={"aside"}>
+                    <i class="fas fa-bars"></i>
+                </div>
+            </header>
         )
     }
 
