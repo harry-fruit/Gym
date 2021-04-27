@@ -9,8 +9,8 @@ export class Footer extends Component{
                 <p>&copy; Isaque Duarte, 2021.</p>
                 <div className="socialIcons">
 
-                    <i class="fab fa-linkedin"></i>
-                    <i class="fab fa-github-square"></i>
+                    <i className="fab fa-linkedin"></i>
+                    <i className="fab fa-github-square"></i>
 
                 </div>
             </footer>

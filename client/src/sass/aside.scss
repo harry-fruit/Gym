@@ -5,8 +5,14 @@
 }
 
 .sideContainer{
-    transition: all 1s;
+    transition: all 0.5s;
     z-index: 1;
     height: 100vh;
-    background-color: red;
+    background-color: gray;
+
+    aside i{
+        cursor: pointer;
+        font-size: 3vh;
+    }
+
 }

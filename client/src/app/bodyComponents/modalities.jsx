@@ -5,7 +5,9 @@ export class Modalities extends Component{
     render(){
 
         return(
-            <h1>Modalities</h1>
+            <main>
+                <h1>Modalities</h1>
+            </main>
         )
 
     }

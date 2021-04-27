@@ -17,8 +17,7 @@ export class App extends Component{
 
         showAside()
 
-
-
+        
         const navButtonNL = document.querySelectorAll("nav a") 
         const navButtons = Array.from(navButtonNL)
         
@@ -49,6 +48,7 @@ export class App extends Component{
                     <Route exact path={"/home"} component={Home}/>
                     <Route path="/about" component={About}/>
                     <Route path="/modalities" component={Modalities}/>
+
                 </Switch>
 
                 <Footer/>

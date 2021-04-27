@@ -22,19 +22,45 @@ export const DocumentTitleOnLoad = () =>{
 
 export const showAside = () =>{
 
-    const asideButton = document.querySelector("header .aside")
-    let asideStatus = null
-
+    const mainContainer = document.querySelector("main")
     const aside = document.querySelector(".sideContainer")
+    const asideOpener = document.querySelector("header .aside")
+    const asideCloser = document.querySelector(".closeAside i")
+    
     const asideWidth = aside.clientWidth
-
-    asideButton.onclick = e =>{
+    let asideStatus = null
+    
+    function fecharAside(){
+    
+        asideStatus = false
+        aside.style.transform = `translateX(${asideWidth}px)`
         
-        asideStatus = true
-        console.log(asideWidth)
-
-        aside.style.transform = `translateX(-${asideWidth}px)`
     }
+
+    function abrirAside(){
+        asideStatus = true
+        aside.style.transform = `translateX(-${asideWidth}px)`
+
+    }
+
+    asideOpener.onclick = e => abrirAside()
+    asideCloser.onclick = e => fecharAside()
+
+
+    mainContainer.onclick = e =>{
+
+        if(asideStatus === true){
+            fecharAside()
+        }
+        
+    }
+
+    const obj ={
+        abrirAside,
+        fecharAside
+    }
+    
+    return obj
 
 }
 

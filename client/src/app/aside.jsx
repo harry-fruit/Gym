@@ -8,6 +8,9 @@ export class Aside extends Component{
         return(
 
             <aside>
+                <div className={"closeAside"}>
+                    <i className="fas fa-times"></i>
+                </div>
 
                 <nav>
                     <Link to="/home" >

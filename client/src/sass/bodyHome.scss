@@ -1,0 +1,15 @@
+*{
+    margin:0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+
+.mainContainer{
+    
+    main{
+        min-height: calc(100vh - 20vh);
+        max-height: calc(100% - 20vh);
+    }
+
+}

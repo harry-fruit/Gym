@@ -8,13 +8,15 @@ export class Header extends Component{
 
             <header>
 
-                <div className={"logo"}>
-                    <h1>Gym</h1> 
-                    <i class="fas fa-dumbbell"></i>
-                </div>
+                <Link to={"/home"}>
+                    <div className={"logo"}>
+                        <h1>Gym</h1> 
+                        <i className="fas fa-dumbbell"></i>
+                    </div>
+                </Link>
 
                 <div className={"aside"}>
-                    <i class="fas fa-bars"></i>
+                    <i className="fas fa-bars"></i>
                 </div>
             </header>
         )
