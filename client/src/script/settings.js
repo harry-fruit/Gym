@@ -1,4 +1,9 @@
-
+function exportData (){
+    this.mainContainer = document.querySelector("main")
+    this.asideOpener = document.querySelector("header .aside")
+    this.asideCloser = document.querySelector(".closeAside i")
+    this.aside = document.querySelector(".sideContainer")
+}
 
 export const DocumentTitle = () =>{
     setTimeout(()=>{
@@ -24,11 +29,12 @@ export const DocumentTitleOnLoad = () =>{
 
 export const showAside = (asideWidthResize) =>{
 
-    const mainContainer = document.querySelector("main")
-    const asideOpener = document.querySelector("header .aside")
-    const asideCloser = document.querySelector(".closeAside i")
-    const aside = document.querySelector(".sideContainer")
-    
+    const data = new exportData()
+
+    const aside = data.aside
+    const asideOpener = data.asideOpener
+    const asideCloser = data.asideCloser
+    const mainContainer = data.mainContainer
     
     let asideWidth = aside.clientWidth
     let asideStatus = false
@@ -42,7 +48,7 @@ export const showAside = (asideWidthResize) =>{
     }
     
     function abrirAside(asideWidthResize){
-        
+
         asideStatus = true
         aside.style.transform = `translateX(-${ asideWidthResize || asideWidth }px)`
 
