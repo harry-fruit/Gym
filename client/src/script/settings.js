@@ -3,6 +3,22 @@ function exportData (){
     this.asideOpener = document.querySelector("header .aside")
     this.asideCloser = document.querySelector(".closeAside i")
     this.aside = document.querySelector(".sideContainer")
+    this.asideStatus = false
+
+    this.fecharAside = () =>{
+        
+        this.asideStatus = false
+        this.aside.style.transform = `translateX(${ 0 }px)`
+
+    }
+
+    this.abrirAside = (asideWidthResize) =>{
+        
+        this.asideStatus = true
+        this.aside.style.transform = `translateX(-${ asideWidthResize || this.aside.clientWidth }px)`
+
+    }
+
 }
 
 export const DocumentTitle = () =>{
@@ -31,37 +47,17 @@ export const showAside = (asideWidthResize) =>{
 
     const data = new exportData()
 
-    const aside = data.aside
     const asideOpener = data.asideOpener
     const asideCloser = data.asideCloser
     const mainContainer = data.mainContainer
-    
-    let asideWidth = aside.clientWidth
-    let asideStatus = false
-    
-    
-    function fecharAside(){
 
-        asideStatus = false
-        aside.style.transform = `translateX(${ 0 }px)`
-        
-    }
-    
-    function abrirAside(asideWidthResize){
-
-        asideStatus = true
-        aside.style.transform = `translateX(-${ asideWidthResize || asideWidth }px)`
-
-    }
-
-    asideOpener.onclick = e => abrirAside()
-    asideCloser.onclick = e => fecharAside()
-
+    asideOpener.onclick = e => data.abrirAside()
+    asideCloser.onclick = e => data.fecharAside()
 
     mainContainer.onclick = e =>{
 
-        if(asideStatus === true){
-            fecharAside()
+        if(data.asideStatus === true){
+            data.fecharAside()
         }
         
     }
