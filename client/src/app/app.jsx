@@ -8,7 +8,7 @@ import { Modalities } from "./bodyComponents/modalities"
 import { Aside } from "./aside"
 import { Footer } from "./footer"
 
-import { DocumentTitle, DocumentTitleOnLoad, showAside } from "../script/features"
+import { DocumentTitle, DocumentTitleOnLoad, showAside } from "../script/settings"
 
 
 export class App extends Component{
@@ -41,15 +41,19 @@ export class App extends Component{
                 <div className={"mainContainer"}>
 
                 <Header/>
+                
+                <main>
 
-                <Switch>
+                    <Switch>
 
-                    <Route exact path={"/"} component={Home}/>
-                    <Route exact path={"/home"} component={Home}/>
-                    <Route path="/about" component={About}/>
-                    <Route path="/modalities" component={Modalities}/>
+                        <Route exact path={"/"} component={Home}/>
+                        <Route exact path={"/home"} component={Home}/>
+                        <Route path="/about" component={About}/>
+                        <Route path="/modalities" component={Modalities}/>
 
-                </Switch>
+                    </Switch>
+ 
+                </main>
 
                 <Footer/>
 

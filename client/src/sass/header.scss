@@ -19,17 +19,20 @@
     
         background-color: black;
     
+        a{
+            text-decoration: none;
+        }
     
         .logo{
             display: flex;
             flex-direction: row;
             align-items: center;
             justify-content: space-around;
-            
     
             color: white;
             h1{
                 font-size: 5vh;
+                text-decoration: none;
             }
     
             i{
