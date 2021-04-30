@@ -1,37 +1,41 @@
+
 function exportData (){
-    this.mainContainer = document.querySelector("main")
-    this.asideOpener = document.querySelector("header .aside")
-    this.asideCloser = document.querySelector(".closeAside i")
-    this.aside = document.querySelector(".sideContainer")
-    this.asideStatus = false
+    this.mainContainer = document.querySelector("main");
+    this.asideOpener = document.querySelector("header .aside");
+    this.asideCloser = document.querySelector(".closeAside i");
+    this.aside = document.querySelector(".sideContainer");
 
     this.fecharAside = () =>{
+
+        this.aside.style.transform = `translateX(${ 0 }px)`;
+        return false;
         
-        this.asideStatus = false
-        this.aside.style.transform = `translateX(${ 0 }px)`
-
-    }
-
-    this.abrirAside = (asideWidthResize) =>{
+    };
+    
+    this.abrirAside = ( asideWidth ) =>{
         
-        this.asideStatus = true
-        this.aside.style.transform = `translateX(-${ asideWidthResize || this.aside.clientWidth }px)`
-
-    }
-
+        this.aside.style.transform = `translateX(-${ asideWidth }px)`;
+        return true
+    };
 }
 
 export const DocumentTitle = () =>{
     setTimeout(()=>{
+
         if( window.location.pathname === "/" || window.location.pathname === "/home" ){
-            document.title = "Home"
-        } else if (window.location.pathname === "/about"){
-            document.title = "About"
-        } else if (window.location.pathname === "/modalities"){
-            document.title = "Modalities"
+            document.title = "Home";
+        } 
+        
+        else if (window.location.pathname === "/about"){
+            document.title = "About";
+        } 
+        
+        else if (window.location.pathname === "/modalities"){
+            document.title = "Modalities";
         }
-    }, 0.001)
-}
+
+    }, 0.001);
+};
 
 export const DocumentTitleOnLoad = () =>{
     if( window.location.pathname === "/" || window.location.pathname === "/home" ){
@@ -43,26 +47,46 @@ export const DocumentTitleOnLoad = () =>{
     }
 } 
 
-export const showAside = (asideWidthResize) =>{
-
+export const showAside = () =>{
+    
     const data = new exportData()
+    
+    const aside = data.aside;
+    const abrirAside = data.abrirAside;
+    const fecharAside = data.fecharAside;
+    
+    const mainContainer = document.querySelector("main");
+    const asideOpener = document.querySelector("header .aside");
+    const asideCloser = document.querySelector(".closeAside i");
+    
+    let asideStatus = false;
+    let asideWidth = aside.clientWidth;
+    
+    
+    asideOpener.onclick = e => {
 
-    const asideOpener = data.asideOpener
-    const asideCloser = data.asideCloser
-    const mainContainer = data.mainContainer
+        abrirAside(asideWidth);
+        asideStatus = abrirAside(asideWidth);
 
-    asideOpener.onclick = e => data.abrirAside()
-    asideCloser.onclick = e => data.fecharAside()
+    };
+
+    asideCloser.onclick = e =>{
+
+        fecharAside();
+        asideStatus = fecharAside();
+
+    };
 
     mainContainer.onclick = e =>{
 
-        if(data.asideStatus === true){
-            data.fecharAside()
-        }
+        if(asideStatus === true){
+            fecharAside();
+            asideStatus = fecharAside();
+        };
         
-    }
+    };
 
-}
+};
 
 
 
@@ -70,6 +94,9 @@ export const showAside = (asideWidthResize) =>{
 
 
 export function slider (){
+
+    const data = new exportData()
+    let asideStatus = data.aside.style.transform == "translateX(0px)" ? false : true;
 
     const moving = document.querySelector(".moving")
 
@@ -149,6 +176,19 @@ export function slider (){
 
         imgSize = imgs[0].clientWidth
         moveSlide(slideStatus)
+
+        asideStatus = data.aside.style.transform === "translateX(0px)" ? false : true;
+
+
+        if(asideStatus === true){
+
+            setTimeout(() => {
+
+                data.aside.style.transform = `translateX(-${data.aside.clientWidth}px)`
+                
+            }, 500);
+
+        }
 
     }
     

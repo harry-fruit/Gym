@@ -59,7 +59,7 @@ export class App extends Component{
 
                 </div>
 
-                <div className={"sideContainer"}>
+                <div style={ {transform: "translateX(0px)"} } className={"sideContainer"}>
                     <Aside/>
                 </div>
             </Fragment>
