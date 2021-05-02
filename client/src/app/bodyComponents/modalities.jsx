@@ -1,11 +1,13 @@
-import React, { Component, Fragment } from "react"
+import React, { Component } from "react"
 
 export class Modalities extends Component{
 
     render(){
 
         return(
-            <h1>Modalities</h1>
+            <section className="bodyModalities">
+                <h1>Modalities</h1>
+            </section>
         )
 
     }

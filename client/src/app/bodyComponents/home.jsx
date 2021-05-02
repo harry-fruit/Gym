@@ -38,6 +38,10 @@ export class Home extends Component{
                             <img src={Pic3} alt=""/>
                             <img src={Pic4} alt=""/>
                         </div>
+
+                    </section>
+                    <section>
+                        
                     </section>
 
                 </section>

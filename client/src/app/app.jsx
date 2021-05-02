@@ -5,6 +5,7 @@ import { Header } from "./header"
 import { Home } from "./bodyComponents/home"
 import { About } from "./bodyComponents/about"
 import { Modalities } from "./bodyComponents/modalities"
+import { Plans } from "./bodyComponents/plans"
 import { Aside } from "./aside"
 import { Footer } from "./footer"
 
@@ -40,22 +41,23 @@ export class App extends Component{
 
                 <div className={"mainContainer"}>
 
-                <Header/>
-                
-                <main>
+                    <Header/>
+                    
+                    <main>
 
-                    <Switch>
+                        <Switch>
 
-                        <Route exact path={"/"} component={Home}/>
-                        <Route exact path={"/home"} component={Home}/>
-                        <Route path="/about" component={About}/>
-                        <Route path="/modalities" component={Modalities}/>
+                            <Route exact path={"/"} component={Home}/>
+                            <Route exact path={"/home"} component={Home}/>
+                            <Route path="/about" component={About}/>
+                            <Route path="/modalities" component={Modalities}/>
+                            <Route path="/plans" component={Plans}/>
 
-                    </Switch>
- 
-                </main>
+                        </Switch>
+    
+                    </main>
 
-                <Footer/>
+                    <Footer/>
 
                 </div>
 

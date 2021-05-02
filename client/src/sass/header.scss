@@ -17,7 +17,7 @@
         align-items: center;
         justify-content: center;
     
-        background-color: black;
+        background-color: rgba(0, 0, 0, 0.884);
     
         a{
             text-decoration: none;
@@ -31,6 +31,7 @@
     
             color: white;
             h1{
+                font-weight: 600;
                 font-size: 5vh;
                 text-decoration: none;
             }
@@ -43,6 +44,8 @@
                 width: 10vh;
                 height: 10vh;
                 font-size: 5.5vh;
+                border-bottom: 4px solid black;
+                border-right: 3px solid black;
                 border-radius: 100%;
     
                 color: black;

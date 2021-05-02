@@ -2,7 +2,7 @@
 function exportData (){
     this.mainContainer = document.querySelector("main");
     this.asideOpener = document.querySelector("header .aside");
-    this.asideCloser = document.querySelector(".closeAside i");
+    this.asideCloser = document.querySelector(".closeAside");
     this.aside = document.querySelector(".sideContainer");
 
     this.fecharAside = () =>{
@@ -14,7 +14,8 @@ function exportData (){
     
     this.abrirAside = ( asideWidth ) =>{
         
-        this.aside.style.transform = `translateX(-${ asideWidth }px)`;
+        let Width = this.aside.clientWidth
+        this.aside.style.transform = `translateX(-${ asideWidth || Width}px)`;
         return true
     };
 }
@@ -34,39 +35,56 @@ export const DocumentTitle = () =>{
             document.title = "Modalities";
         }
 
+        else if (window.location.pathname === "/plans"){
+            document.title = "Plans";
+        }
+
     }, 0.001);
 };
 
 export const DocumentTitleOnLoad = () =>{
+
     if( window.location.pathname === "/" || window.location.pathname === "/home" ){
-        document.title = "Home"
-    } else if (window.location.pathname === "/about"){
-        document.title = "About"
-    } else if (window.location.pathname === "/modalities"){
-        document.title = "Modalities"
+        document.title = "Home";
+    } 
+    
+    else if (window.location.pathname === "/about"){
+        document.title = "About";
     }
-} 
+    
+    else if (window.location.pathname === "/modalities"){
+        document.title = "Modalities";
+    }
+
+    else if (window.location.pathname === "/plans"){
+        document.title = "Plans";
+    }
+}; 
 
 export const showAside = () =>{
     
     const data = new exportData()
     
-    const aside = data.aside;
     const abrirAside = data.abrirAside;
     const fecharAside = data.fecharAside;
     
     const mainContainer = document.querySelector("main");
     const asideOpener = document.querySelector("header .aside");
-    const asideCloser = document.querySelector(".closeAside i");
+    const asideCloser = document.querySelector(".closeAside");
     
     let asideStatus = false;
-    let asideWidth = aside.clientWidth;
+
+    setInterval(() => {
+        if(asideStatus === true){
+            abrirAside();
+        }
+    }, 600);
     
     
     asideOpener.onclick = e => {
 
-        abrirAside(asideWidth);
-        asideStatus = abrirAside(asideWidth);
+        abrirAside();
+        asideStatus = abrirAside();
 
     };
 
@@ -96,18 +114,17 @@ export const showAside = () =>{
 export function slider (){
 
     const data = new exportData()
-    let asideStatus = data.aside.style.transform == "translateX(0px)" ? false : true;
+
+    let asideStatus = data.aside.style.transform === "translateX(0px)" ? false : true;
 
     const moving = document.querySelector(".moving")
-
     const imgsNL = document.querySelectorAll(".slider img")
     const imgs = Array.from(imgsNL)
-
     const nextButton = document.querySelector(".arrowRight")
     const previousButton = document.querySelector(".arrowLeft")
 
-    let imgSize = imgs[0].clientWidth
     
+    let imgSize = imgs[0].clientWidth
     let timeOut;
     let slideStatus = 1
     
@@ -175,20 +192,11 @@ export function slider (){
     window.onresize = e =>{
 
         imgSize = imgs[0].clientWidth
+        
         moveSlide(slideStatus)
-
+        
         asideStatus = data.aside.style.transform === "translateX(0px)" ? false : true;
-
-
-        if(asideStatus === true){
-
-            setTimeout(() => {
-
-                data.aside.style.transform = `translateX(-${data.aside.clientWidth}px)`
-                
-            }, 500);
-
-        }
+        
 
     }
     
