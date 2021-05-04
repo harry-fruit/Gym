@@ -1,9 +1,9 @@
 import React, { Component, Fragment } from "react"
 
-import { Header } from "./header"
-import { Body} from "./body"
-import { Aside } from "./aside"
-import { Footer } from "./footer"
+import { Header } from "./components/header"
+import { Body} from "./components/body"
+import { Aside } from "./components/aside"
+import { Footer } from "./components/footer"
 
 import { DocumentTitle, DocumentTitleOnLoad, showAside } from "../script/settings"
 

@@ -37,8 +37,8 @@
             align-items: center;
             width: 12vw;
             height: 12vw;
-            max-width: 60px;
-            max-height: 60px;
+            max-width: 30px;
+            max-height: 30px;
             
             position: absolute;
             transition: all 0.3s;
@@ -51,7 +51,7 @@
             border-radius: 100%;
             
             i{
-                font-size: 4vh;
+                font-size: 3vh;
                 text-align: center;
                 transition: all 0.5s;
     
@@ -123,15 +123,12 @@
                 a{
                     display: flex;
                     flex-direction: row;
-                    align-items: center;
                     
-                    gap: 10px;
                     text-align: center;
-                    font-size: 2.5vh;
-                    width: 90%;
-                    max-width: 350px;
-                    padding: 3vh 1vh;
+                    font-size: 3vh;
                     transition: all 0.3s;
+                    padding: 3vh 0vh;
+                    width: 70%;
 
                     background-color: orange;
                     color: white;
@@ -141,14 +138,14 @@
                     border-radius: 10px;
 
                     p{
-                        display: flex;
-                        justify-content: center;
-
+                        margin-left: 12%;
                     }
                     
                     i{
-                        width: 30%;
+                        width: 20%;
+                        margin-left: 5%;
                     }
+
 
                 }
 
@@ -156,7 +153,7 @@
                     background-color: white;
                     color: orange;
                 }
-    
+                
             }
 
         }
@@ -193,18 +190,6 @@
                         }
                 }
     
-                nav{
-        
-                    a{
-                        font-size: 3vh;
-                        width: 90%;
-                        max-width: 350px;
-                        padding: 3.5vh 1vh;
-                        
-                    }
-        
-                }
-    
             }
     
         }
@@ -238,17 +223,6 @@
                             font-size: 8vh;
                         }
                 }
-
-                nav{
-    
-                    a{
-                        font-size: 2.5vh;
-                        width: 80%;
-    
-                    }
-    
-        
-                }
     
             }
     
@@ -259,11 +233,16 @@
 
 }
 
-@media (min-height:800px){
+@media (min-height:800px) and (max-width:600px){
     .sideContainer{
     
         aside{
-    
+
+            .closeAside{
+                max-width: 60px;
+                max-height: 60px;
+            }
+
             .secondRow{
     
                 .logo{
@@ -280,19 +259,28 @@
                             font-size: 7vh;
                         }
                 }
-    
+
                 nav{
+        
                     a{
-                        font-size: 3vh;
-                        width: 90%;
+                      width: 80%;
+
+                      p{
+                        margin-left: 10%;
+                      }  
+
+                      i{
+
+                      }
                     }
-    
         
                 }
     
             }
     
         }
+
+        
     
     }
 
@@ -302,7 +290,12 @@
     .sideContainer{
     
         aside{
-    
+
+            .closeAside{
+                max-width: 60px;
+                max-height: 60px;
+            }
+
             .secondRow{
     
                 .logo{
@@ -321,10 +314,15 @@
                 }
                 
                 nav{
+        
                     a{
-                        
-                        border: 0.5vh solid rgb(0, 0, 0);
+                      width: 80%;
+
+                      p{
+                        margin-left: 10%;
+                      }  
                     }
+        
                 }
     
             }
@@ -335,7 +333,7 @@
 
 }
 
-@media (min-width:1300px){
+@media (min-width:1100px){
     .sideContainer{
         min-width: 30vw;
     }

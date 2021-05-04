@@ -23,7 +23,7 @@ export class Aside extends Component{
 
                         <Link to="/home" >
                             <i className="fas fa-home"></i>
-                            Home
+                            <p>Home</p>
                         </Link>
 
                         <Link to="/about" >
@@ -33,12 +33,12 @@ export class Aside extends Component{
 
                         <Link to="/plans" >
                             <i class="fas fa-medal"></i>
-                            Plans
+                            <p>Plans</p>
                         </Link>
 
                         <Link to="/modalities" >
                             <i class="fas fa-swimmer"></i>
-                            Modalities
+                            <p>Modalities</p>
                         </Link>
 
                     </nav>
