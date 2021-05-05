@@ -1,6 +1,6 @@
 import React, { Component, Fragment } from "react"
 
-import { slider } from "../../../script/settings"
+import { Slider } from "../../../script/settings"
 
 import Pic1 from "../../../img/homeSlide/thumb1.jpg"
 import Pic2 from "../../../img/homeSlide/thumb2.jpg"
@@ -11,7 +11,7 @@ export class Home extends Component{
 
     componentDidMount(){
         
-        slider()
+        Slider()
 
     }
 

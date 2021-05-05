@@ -32,12 +32,12 @@ export class Aside extends Component{
                         </Link>
 
                         <Link to="/plans" >
-                            <i class="fas fa-medal"></i>
+                            <i className="fas fa-medal"></i>
                             <p>Plans</p>
                         </Link>
 
                         <Link to="/modalities" >
-                            <i class="fas fa-swimmer"></i>
+                            <i className="fas fa-swimmer"></i>
                             <p>Modalities</p>
                         </Link>
 

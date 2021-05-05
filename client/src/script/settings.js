@@ -1,3 +1,4 @@
+let slideStatus = 1
 
 function exportData (){
     this.mainContainer = document.querySelector("main");
@@ -18,7 +19,28 @@ function exportData (){
         this.aside.style.transform = `translateX(-${ asideWidth || Width}px)`;
         return true
     };
-}
+
+
+    //Slide
+    this.moving = document.querySelector(".moving");
+    const imgsNL = document.querySelectorAll(".slider img");
+    this.imgs = Array.from(imgsNL);
+
+    this.moveSlide = (slideStatus, newSize)=>{
+        const size = newSize;
+
+        if(slideStatus === 1){
+            this.moving.style.transform = "translateX(0px)"
+        }else if (slideStatus === 2){
+            this.moving.style.transform = `translateX(-${size}px)`
+        }else if (slideStatus === 3){
+            this.moving.style.transform = `translateX(-${size * 2}px)`
+        }else if (slideStatus === 4){
+            this.moving.style.transform = `translateX(-${size * 3}px)`
+        }
+
+    }
+};
 
 export const DocumentTitle = () =>{
     setTimeout(()=>{
@@ -59,7 +81,28 @@ export const DocumentTitleOnLoad = () =>{
     else if (window.location.pathname === "/plans"){
         document.title = "Plans";
     }
-}; 
+};
+
+
+function DocumentOnResize (){
+
+    const data = new exportData();
+
+    let newSize = data.imgs[0].clientWidth;
+    let asideStatus = data.aside.style.transform === "translateX(0px)" ? false : true;
+
+    window.onresize = e =>{
+
+        newSize = data.imgs[0].clientWidth;
+        data.moveSlide(slideStatus, newSize);
+
+        asideStatus = data.aside.style.transform === "translateX(0px)" ? false : true;
+
+    }
+
+    return newSize;
+} 
+
 
 export const showAside = () =>{
     
@@ -107,53 +150,31 @@ export const showAside = () =>{
 };
 
 
-
-
-
-
-export function slider (){
+export function Slider (){
 
     const data = new exportData()
+    const moveSlide = data.moveSlide
 
-    let asideStatus = data.aside.style.transform === "translateX(0px)" ? false : true;
+
 
     const moving = document.querySelector(".moving")
     const imgsNL = document.querySelectorAll(".slider img")
     const imgs = Array.from(imgsNL)
     const nextButton = document.querySelector(".arrowRight")
     const previousButton = document.querySelector(".arrowLeft")
-
     
-    let imgSize = imgs[0].clientWidth
     let timeOut;
-    let slideStatus = 1
-    
-    //CoreFunction
-    function moveSlide(slideStatus){
-
-        if(slideStatus === 1){
-            moving.style.transform = "translateX(0px)"
-        }else if (slideStatus === 2){
-            moving.style.transform = `translateX(-${imgSize}px)`
-        }else if (slideStatus === 3){
-            moving.style.transform = `translateX(-${imgSize * 2}px)`
-        }else if (slideStatus === 4){
-            moving.style.transform = `translateX(-${imgSize * 3}px)`
-        }
-
-    }
-
     
     function dispararTimeOut(){
         
         timeOut = setInterval(() => {
-            
+
             if(slideStatus < (imgs.length)){
                 slideStatus++
             }else{
                 slideStatus = 1
             }
-            moveSlide(slideStatus)
+            moveSlide(slideStatus, DocumentOnResize())
             
         }, 6000);
         
@@ -168,7 +189,7 @@ export function slider (){
             slideStatus = 1
         }
         
-        moveSlide(slideStatus)
+        moveSlide(slideStatus, DocumentOnResize())
         
         clearInterval(timeOut)
         dispararTimeOut()
@@ -183,26 +204,16 @@ export function slider (){
             slideStatus = 1
         }
         
-        moveSlide(slideStatus)
+        moveSlide(slideStatus, DocumentOnResize())
         
         clearInterval(timeOut)
         dispararTimeOut()
     }
     
-    window.onresize = e =>{
-
-        imgSize = imgs[0].clientWidth
-        
-        moveSlide(slideStatus)
-        
-        asideStatus = data.aside.style.transform === "translateX(0px)" ? false : true;
-        
-
-    }
     
     dispararTimeOut()
 
-
 }
 
-export default (DocumentTitle, DocumentTitleOnLoad, showAside, slider)
+
+export default (DocumentTitle, DocumentTitleOnLoad, showAside, Slider)
