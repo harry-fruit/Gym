@@ -40,8 +40,23 @@ export class Home extends Component{
                         </div>
 
                     </section>
-                    <section>
-                        
+
+
+                    <section className="secondRow">
+
+                        <article className="healthyLife">
+                            <h2>
+                                Would you like to have a healthy life?
+                            </h2>
+                        </article>
+
+
+                        <article className="healthyLifeInfo">
+                            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Ea vitae sunt autem magnam molestias corporis ratione excepturi sed quo repellendus cupiditate amet voluptatibus, non a repellat id delectus placeat odit?</p>
+                            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Rem ut atque, sed mollitia repellat corporis. Atque illum non nam quis reprehenderit nemo voluptatibus delectus, ullam porro eligendi modi temporibus pariatur?</p>
+                        </article>
+
+
                     </section>
 
                 </section>

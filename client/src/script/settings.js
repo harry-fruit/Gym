@@ -100,7 +100,7 @@ function DocumentOnResize (){
 
     }
 
-    return newSize;
+    return {newSize};
 } 
 
 
@@ -155,11 +155,7 @@ export function Slider (){
     const data = new exportData()
     const moveSlide = data.moveSlide
 
-
-
-    const moving = document.querySelector(".moving")
-    const imgsNL = document.querySelectorAll(".slider img")
-    const imgs = Array.from(imgsNL)
+    const imgs = data.imgs
     const nextButton = document.querySelector(".arrowRight")
     const previousButton = document.querySelector(".arrowLeft")
     
@@ -174,7 +170,7 @@ export function Slider (){
             }else{
                 slideStatus = 1
             }
-            moveSlide(slideStatus, DocumentOnResize())
+            moveSlide(slideStatus, DocumentOnResize().newSize)
             
         }, 6000);
         
@@ -189,7 +185,7 @@ export function Slider (){
             slideStatus = 1
         }
         
-        moveSlide(slideStatus, DocumentOnResize())
+        moveSlide(slideStatus, DocumentOnResize().newSize)
         
         clearInterval(timeOut)
         dispararTimeOut()
@@ -204,7 +200,7 @@ export function Slider (){
             slideStatus = 1
         }
         
-        moveSlide(slideStatus, DocumentOnResize())
+        moveSlide(slideStatus, DocumentOnResize().newSize)
         
         clearInterval(timeOut)
         dispararTimeOut()
