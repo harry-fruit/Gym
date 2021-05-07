@@ -17,6 +17,7 @@ main, .bodyHome{
         .bodyHome{
             display: flex;
             flex-direction: column;
+            gap: 4vh;
             position: relative;
 
             .slider{
@@ -84,19 +85,159 @@ main, .bodyHome{
                 flex-direction: column;
                 align-items: center;
                 justify-content: center;
-                background-image: url("../img/homePics/secondRow.jpg");
-                background-position: center;
-                background-repeat: no-repeat;
-                background-size: cover;
+
                 width: 100vw;
                 min-height:40vh;
-                
+                padding: 4vw;
+                gap: 3vh;
+
+                background-color: rgba(0, 0, 0, 0.884);              
 
                 .healthyLife{
+                    color: white;
+                    border: 2px solid orange;
+                    text-shadow: 2px 1px 3px rgba(34,34,34,1);
+
+                    font-size: 2vh;
+                    padding: 2vh;
+                    text-align: center;
+
+                    span{
+                        color: orange;
+                        text-decoration: underline;
+                    }
                 }
 
                 .healthyLifeInfo{
+                    color: white;
+                }
+            }
 
+            .thirdRow{
+                display: flex;
+                align-items: center;
+                justify-content: center;
+
+                background-image: url("../img/homePics/thirdRow.jpg");
+                background-size: cover;
+                background-position: center;
+                background-attachment: fixed;
+                
+                width: 100vw;
+                min-height: 50vw;
+                padding: 4vw;
+
+                .containerThird{
+
+                    display: flex;
+                    flex-direction: column;
+                    gap: 2vh;
+                }
+
+                h2{
+                    font-size: 3.5vh;
+                    padding: 2vh;
+                    text-align: center;
+
+                    border: 2px solid orange;
+                    color:white;
+                    text-shadow: 2px 1px 3px rgba(34,34,34,1);
+                }
+                a{
+                    align-self: flex-end;
+
+                    color: orange;
+                    text-shadow: 2px 1px 3px rgba(113,104,104,1);
+                }
+            }
+
+            .fourthRow{
+                display: flex;
+                flex-direction: column;
+                gap: 4vh;
+
+                width: 100vw;
+                min-height: 50vh;
+                padding: 4vw;
+                background-color: rgba(0, 0, 0, 0.884); 
+                
+                h2{
+                    color: white;
+                    text-align: center;
+                    padding: 2vh;
+                    font-size: 3.2vh;
+
+                    border: 2px solid orange;
+
+                    span{
+                        color: orange;
+                    }
+
+                    .biggerWord{
+                        font-size: 4.2vh;
+                    }
+                }
+
+                .fourthContainer{
+                    display: flex;
+                    flex-direction: row;
+                    justify-content: center;
+                    padding: 8vw 4vw;
+                    height: 100%;
+                    
+                    background-color: rgba(77, 75, 75, 0.596);
+                    border-bottom-left-radius: 20px;
+                    border-bottom-right-radius: 20px;
+                    
+                    .imagens{
+                        display: flex;
+                        flex-direction: row;
+                        justify-content: flex-start;
+                        gap: 5vw;
+                        min-width: 80vw;
+                        overflow: scroll;
+                        height: auto;
+
+                        .img{
+                            display: flex;
+                            align-items: center;
+                            justify-content: center;
+                            min-width: 70vw;
+                            height: 60vh;
+                            border-radius: 5%;
+    
+                            background-position: center;
+                            background-size: cover;
+                            object-fit: cover;
+                            transition: all 0.5s;
+    
+                            p{
+                                opacity: 0;
+                                color: white;
+                                border: 2px solid orange;                    text-shadow: 2px 1px 3px rgba(113,104,104,1);
+                                text-shadow: 2px 1px 3px rgba(113,104,104,1);
+                                transition: all 0.5s;
+    
+                                font-size: 3vh;
+                                padding: 2vh 4vh;
+                            }
+                        }
+    
+                        .img:hover{
+                            transform: scale(1.15);
+                        }
+    
+                        .luta{
+                            background-image: url("../img/homePics/boxing.jpg");
+                        }
+                        
+                        .musculacao{
+                            background-image: url("../img/homePics/musculacao.jpg");
+                        }
+                        .crossfit{
+                            background-image: url("../img/homePics/crossfit.jpg");
+                        }
+                    }
                 }
             }
             
@@ -180,7 +321,7 @@ main, .bodyHome{
     }
 }
 
-@media (min-width:800px){
+@media (min-width:750px){
 
     .mainContainer{
         
@@ -195,6 +336,32 @@ main, .bodyHome{
                     }
         
                 }
+
+                .fourthRow{
+
+                    .fourthContainer{
+                        flex-direction: row;
+                        padding: 5vw 2vw;
+
+                        .imagens{
+                            overflow: visible;
+                            gap: 2.2vw;
+                            .img{
+                                padding: 8vw 4vw;
+                                min-width: 30%;
+                                height: 60vh;
+    
+                                p{
+                                    font-size: 2.5vw;
+                                }
+                            }
+
+                        }
+
+                    }
+
+                }
+
             
             }
 
@@ -219,6 +386,8 @@ main, .bodyHome{
                     }
         
                 }
+
+
             
             }
 

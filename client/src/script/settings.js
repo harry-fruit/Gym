@@ -93,9 +93,11 @@ function DocumentOnResize (){
 
     window.onresize = e =>{
 
-        newSize = data.imgs[0].clientWidth;
-        data.moveSlide(slideStatus, newSize);
+        if(window.location.pathname === `${"/home" || "/"}` ){
 
+            newSize = data.imgs[0].clientWidth;
+            data.moveSlide(slideStatus, newSize);
+        }
         asideStatus = data.aside.style.transform === "translateX(0px)" ? false : true;
 
     }
@@ -161,21 +163,25 @@ export function Slider (){
     
     let timeOut;
     
-    function dispararTimeOut(){
-        
-        timeOut = setInterval(() => {
 
-            if(slideStatus < (imgs.length)){
-                slideStatus++
-            }else{
-                slideStatus = 1
-            }
-            moveSlide(slideStatus, DocumentOnResize().newSize)
-            
-        }, 6000);
+    // function dispararTimeOut(){
         
-    }
-    
+    //     timeOut = setInterval(() => {
+    //         if(window.location.pathname === "/home"){
+
+    //             if(slideStatus < (imgs.length)){
+    //                 slideStatus++
+    //             }else{
+    //                 slideStatus = 1
+    //             }
+
+    //             moveSlide(slideStatus, DocumentOnResize().newSize)
+    //         }
+            
+                
+    //     }, 6000);
+    // }
+
     
     nextButton.onclick = e =>{
         
@@ -187,8 +193,8 @@ export function Slider (){
         
         moveSlide(slideStatus, DocumentOnResize().newSize)
         
-        clearInterval(timeOut)
-        dispararTimeOut()
+        // clearInterval(timeOut)
+        // dispararTimeOut()
         
     }
     
@@ -202,12 +208,11 @@ export function Slider (){
         
         moveSlide(slideStatus, DocumentOnResize().newSize)
         
-        clearInterval(timeOut)
-        dispararTimeOut()
+        // clearInterval(timeOut)
+        // dispararTimeOut()
     }
     
-    
-    dispararTimeOut()
+    // dispararTimeOut()
 
 }
 

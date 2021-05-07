@@ -28,6 +28,7 @@ export class App extends Component{
         window.onload = e =>{
             DocumentTitleOnLoad()
         }
+        
     }
 
     render(){
