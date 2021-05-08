@@ -78,7 +78,6 @@ export class Home extends Component{
                             <span>Everything</span> you need is <span className="biggerWord">HERE</span>
                         </h2>
                         <div className="fourthContainer">
-
                             <div className="imagens">
 
                                 <div className="img luta">

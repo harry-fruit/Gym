@@ -2,6 +2,7 @@
 
 @import "body";
 @import "bodyHome";
+@import "bodyPlans";
 
 @import "aside";
 @import "footer";
@@ -15,4 +16,12 @@
 html, body{
     width: 100%;
     height: 100%;
+}
+
+.mainContainer { 
+
+    main{
+        display: flex;
+    }
+    
 }
