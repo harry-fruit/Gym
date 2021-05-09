@@ -1,4 +1,4 @@
-import React, { Component, Fragment } from "react"
+import React, { Component } from "react"
 
 export class Plans extends Component{
 
@@ -8,13 +8,13 @@ export class Plans extends Component{
             <section className="bodyPlans">
 
                <div className="firstRow">
-                   <h1>Here's some plans to you</h1>
+                   <h1>Plans</h1>
                </div>
 
                <section className="secondRow">
 
                     <section className="plan">
-                        <div className="planHeader">
+                        <div className="planHeader cinza">
                             <h2>Basic</h2>
                         </div>
 
@@ -47,13 +47,16 @@ export class Plans extends Component{
                                 <p>Lorem Ipsum</p>
                             </div>
 
+
                         </div>
+
+                            <button className="cinza">Buy</button>
 
                     </section>
 
                     <section className="plan">
-                        <div className="planHeader">
-                            <h2>Default</h2>
+                        <div className="planHeader lightBlack">
+                            <h2>Recommended</h2>
                         </div>
 
                         <div className="planInfo">
@@ -87,10 +90,11 @@ export class Plans extends Component{
 
                         </div>
 
+                            <button className="lightBlack">Buy</button>
                     </section>
 
                     <section className="plan">
-                        <div className="planHeader">
+                        <div className="planHeader orange">
                             <h2>Pro</h2>
                         </div>
 
@@ -125,6 +129,7 @@ export class Plans extends Component{
 
                         </div>
 
+                            <button className="orange">Buy</button>
                     </section>
 
                </section>

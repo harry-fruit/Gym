@@ -68,7 +68,7 @@ export class Home extends Component{
                             <h2>
                                 There's a lot of gyms closest than you can imagine
                             </h2>
-                            <Link to={"/plans"}>See the closer gym from you</Link>
+                            <Link to={"/about"}>See the closer gym from you</Link>
 
                         </div>
                     </section>

@@ -161,7 +161,7 @@ export function Slider (){
     const nextButton = document.querySelector(".arrowRight")
     const previousButton = document.querySelector(".arrowLeft")
     
-    let timeOut;
+    // let timeOut;
     
 
     // function dispararTimeOut(){

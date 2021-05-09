@@ -20,7 +20,6 @@ export function homeStyle (){
         }
     })
 
-
 }
 
 export default (homeStyle)
