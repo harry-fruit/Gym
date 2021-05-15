@@ -109,6 +109,7 @@ main, .bodyHome{
 
                 .healthyLifeInfo{
                     color: white;
+                    text-shadow: 1px 1px 0px rgba(10, 10, 10, 0.6);
                 }
             }
 
@@ -140,13 +141,13 @@ main, .bodyHome{
 
                     border: 2px solid orange;
                     color:white;
-                    text-shadow: 2px 1px 3px rgba(34,34,34,1);
+                    text-shadow: 1px 1px 0px rgba(10, 10, 10, 0.6);
                 }
                 a{
                     align-self: flex-end;
 
                     color: orange;
-                    text-shadow: 2px 1px 3px rgba(113,104,104,1);
+                    text-shadow: 1px 1px 0px rgba(10, 10, 10, 0.6);
                 }
             }
 
@@ -162,6 +163,7 @@ main, .bodyHome{
                 
                 h2{
                     color: white;
+                    text-shadow: 1px 1px 0px rgba(10, 10, 10, 0.6);
                     text-align: center;
                     padding: 2vh;
                     font-size: 3.2vh;
@@ -213,8 +215,8 @@ main, .bodyHome{
                             p{
                                 opacity: 0;
                                 color: white;
-                                border: 2px solid orange;                    text-shadow: 2px 1px 3px rgba(113,104,104,1);
-                                text-shadow: 2px 1px 3px rgba(113,104,104,1);
+                                border: 2px solid orange;
+                                text-shadow: 1px 1px 0px rgba(10, 10, 10, 0.6);
                                 transition: all 0.5s;
     
                                 font-size: 3vh;
