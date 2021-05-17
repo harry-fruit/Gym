@@ -6,7 +6,9 @@ export class Modalities extends Component{
 
         return(
             <section className="bodyModalities">
-                <h1>Modalities</h1>
+                <section className="firstRow">
+                    <h1>Modalities</h1>
+                </section>
             </section>
         )
 

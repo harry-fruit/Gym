@@ -1,0 +1,43 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+.mainContainer{
+    main{
+        .bodyModalities{
+            display: flex;
+            flex-direction: column;
+
+            width: 100%;
+            
+            background-color: rgba(0, 0, 0, 0.884); 
+            
+            .firstRow{
+                display: flex;
+                flex-direction: column;
+
+                width: 100%;
+                min-height: 20vh;
+
+                background-color: rgba(77, 75, 75, 0.596);
+                
+                h1{
+                    align-self: center;
+                    padding: 2.5vh 8vh;
+                    font-size: 3.5vh;
+                    margin-top: 3vh;
+    
+                    background-color: rgb(19, 19, 19);
+                    color: white;
+                    
+                    border-bottom: 3px solid orange;
+                    border-right: 3px solid orange;
+                    border-bottom-right-radius: 15px;
+                }
+            }
+
+        }
+    }
+}

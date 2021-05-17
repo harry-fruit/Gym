@@ -21,15 +21,17 @@
             .firstRow{
                 display: flex;
                 flex-direction: column;
+                align-items: center;
                 gap: 4vh;
 
                 background-color: rgba(77, 75, 75, 0.596);
                 padding: 3vh 5vw;
+                width: 100%;
 
                 h1{
                     align-self: center;
                     padding: 2.5vh 8vh;
-                    font-size: 4.5vh;
+                    font-size: 3.5vh;
 
                     background-color: rgb(19, 19, 19);
                     color: white;
@@ -41,11 +43,13 @@
                 
                 article{
                     background-color: rgb(19, 19, 19);
+                    width: 100%;
                     border: 3px solid orange;
                     border-bottom-right-radius: 15px;
                     border-bottom-left-radius: 15px;
                     p{
                         padding: 2vh 6vw;
+                        font-size: 2vh;
                         color: white;
                         text-shadow: 1px 1px 0px rgba(10, 10, 10, 0.6);
                         
@@ -57,16 +61,19 @@
                 display: flex;
                 flex-direction: column;
                 gap: 2vh;
-
+                
+                width: 100%;
                 min-height: 50vh;
-                padding: 4vh 0;
+                padding: 2vh 0;
+                
+                background-color: rgba(77, 75, 75, 0.596);
 
                 
                 h2{
                     align-self: center;
 
-                    padding: 2vh 4vw;
-                    font-size: 4vh;
+                    padding: 2vh 6vw;
+                    font-size: 3vh;
                     margin-bottom: 2vh;
 
                     color: white;
@@ -83,12 +90,39 @@
                     width: 100%;
                     height: 40vh;
                 }
-                
-                width: 100vw;
-                background-color: rgba(77, 75, 75, 0.596);
+
+                p{
+                    align-self: flex-end;
+                    font-size: 1.7vh;
+                    color: white;
+                }
             }
         }
 
     }
 
 }
+
+
+@media(min-width:1025px){
+    .mainContainer{
+        main{
+            .bodyAbout{
+                .firstRow{
+                    article{
+                        width: 80%;
+                    }
+                }
+                .secondRow{
+                    iframe{
+                        height: 60vh;
+                    }
+                    P{
+                        margin-right: 5VW;
+                    }
+                }
+            }
+        }
+    }
+}
+
