@@ -12,7 +12,6 @@
             display: flex;
             flex-direction: column;
             align-items: center;
-            background-color: rgb(77, 75, 75);
             
             width: 100vw;
             
@@ -22,9 +21,8 @@
                 margin-top: 4vh;
                 padding: 2.5vh 8vh;
                 background-color: rgb(19, 19, 19);
-
-                border-bottom: 3px solid orange;
-                border-right: 3px solid orange;
+                border-bottom: 0.7vh solid orange;
+                border-right: 0.7vh solid orange;
                 border-bottom-right-radius: 15px;
                 
                 h1{
