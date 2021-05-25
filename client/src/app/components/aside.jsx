@@ -22,22 +22,18 @@ export class Aside extends Component{
                     <nav>
 
                         <Link to="/home" >
-                            <i className="fas fa-home"></i>
                             <p>Home</p>
                         </Link>
 
                         <Link to="/about" >
-                            <i className="far fa-address-card"></i>
                             <p>About</p>
                         </Link>
 
                         <Link to="/plans" >
-                            <i className="fas fa-medal"></i>
                             <p>Plans</p>
                         </Link>
 
                         <Link to="/modalities" >
-                            <i className="fas fa-swimmer"></i>
                             <p>Modalities</p>
                         </Link>
 
