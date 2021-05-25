@@ -1,9 +1,15 @@
 {
-  "short_name": "React App",
-  "name": "Create React App Sample",
-  "icons": [],
-  "start_url": ".",
+  "short_name": "Gym Project",
+  "name": "Gym Project By Isaque D.",
+  "descriotion":"A simple Gym Project",
+  "icons": [
+    {
+      "src":"gym.png",
+      "type":"image/png",
+      "sizes":"783x779"
+    }
+  ],
+  "start_url": "index.html",
   "display": "standalone",
-  "theme_color": "#000000",
-  "background_color": "#ffffff"
+  "background_color": "#494747"
 }
